@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e # exit immediately if a command has nonzero exit code
+pushd ~/nixos
+git diff -U0
+
+read -p "OK to push and rebuild? (y/n) " -n 1 -r
+if [[ ! $REPLY =~ ^[Yy]$ ]] then
+	exit 1
+fi
+echo
+
+echo "NixOS is rebuilding..."
+sudo nixos-rebuild switch --flake ./#default &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
+current=$(nixos-rebuild list-generations | grep current)
+git commit -am "$current"
+popd
+echo "NixOS rebuilt successfully!"
