@@ -114,6 +114,7 @@
     discord
     spotify
     ticktick
+    vscode
 
     # terminal utils
     alacritty
