@@ -113,6 +113,7 @@
     vivaldi
     discord
     spotify
+    ticktick
 
     # terminal utils
     alacritty
