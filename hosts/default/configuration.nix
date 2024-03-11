@@ -88,6 +88,7 @@
     isNormalUser = true;
     description = "joel";
     shell = pkgs.nushell;
+    useDefaultShell = true;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # firefox
@@ -119,7 +120,8 @@
     vscode
 
     # terminal utils
-    alacritty
+    #alacritty
+    kitty
     nushell
     starship
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
