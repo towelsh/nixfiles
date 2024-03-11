@@ -87,6 +87,7 @@
   users.users.joel = {
     isNormalUser = true;
     description = "joel";
+    shell = pkgs.nushell;
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # firefox
