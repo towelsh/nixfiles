@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e # exit immediately if a command has nonzero exit code
 pushd ~/nixos
+echo $NIX_PATH
 git diff -U0
 
 read -p "OK to push and rebuild? (y/n) " -n 1 -r
