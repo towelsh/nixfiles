@@ -111,7 +111,8 @@
     firefox
     thunderbird
     vivaldi
-    discord
+    # discord
+    vesktop
     spotify
     ticktick
     vscode
