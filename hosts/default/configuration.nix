@@ -121,6 +121,7 @@
 
     # terminal utils
     #alacritty
+    neofetch
     kitty
     nushell
     starship
@@ -132,6 +133,7 @@
     # desktop env
     gnome.gnome-tweaks
     gnome-extension-manager
+    gnome.dconf-editor
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

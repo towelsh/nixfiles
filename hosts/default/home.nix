@@ -81,6 +81,10 @@
   # configure gtk theme (todo: move to a module)
   gtk = {
   	enable = true;
+	iconTheme = {
+		name = "Papirus-Dark";
+		package = pkgs.papirus-icon-theme;
+	};
 	theme = {
 		name = "Catppuccin-Macchiato-Standard-Pink-Dark";
 		package = pkgs.catppuccin-gtk.override {
@@ -92,10 +96,21 @@
 	};
   };
 
+# we need to symlink the themes for gtk4 theme to work
 xdg.configFile = {
   "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
   "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
   "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
 };
+
+  # configure dconf settings for gnome
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+      enable-hot-corners = false;
+      edge-tiling = true;
+    };
+  };
+
 
 }
