@@ -132,6 +132,13 @@
     gh
     lazygit
 
+    # devtools
+    rustup
+    python
+    jdk8
+    jdk
+    nodejs_21
+
     # desktop env
     gnome.gnome-tweaks
     gnome-extension-manager
