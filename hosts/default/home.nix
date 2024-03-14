@@ -78,6 +78,10 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # kitty terminal configuration
+  home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty.conf;
+
+
   # configure gtk theme (todo: move to a module)
   gtk = {
   	enable = true;
