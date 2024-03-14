@@ -81,6 +81,9 @@
   # kitty terminal configuration
   home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty.conf;
 
+  # starship prompt configuration
+  home.file.".config/starship.toml".text = builtins.readFile ./starship.toml;
+
 
   # configure gtk theme (todo: move to a module)
   gtk = {
