@@ -138,9 +138,10 @@
     gnome.dconf-editor
   ];
 
-  # add nerd fonts
+  # add fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    mona-sans
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
