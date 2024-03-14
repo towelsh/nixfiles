@@ -134,7 +134,7 @@
 
     # devtools
     rustup
-    python
+    python3
     jdk8
     jdk
     nodejs_21
