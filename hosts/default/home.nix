@@ -138,7 +138,7 @@ xdg.configFile = {
     };
     "org/gnome/shell" = {
       enabled-extensions = [
-        "just-perfection-desktop@just-perfection", "dash-to-dock@micxgx.gmail.com", "sp-tray@sp-tray.esenliyim.github.com", "trayIconsReloaded@selfmade.pl", "Rounded_Corners@lennart-k", "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "just-perfection-desktop@just-perfection" "dash-to-dock@micxgx.gmail.com" "sp-tray@sp-tray.esenliyim.github.com" "trayIconsReloaded@selfmade.pl" "Rounded_Corners@lennart-k" "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
     };
   };
