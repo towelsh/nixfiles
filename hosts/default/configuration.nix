@@ -121,6 +121,7 @@
 
     # terminal utils
     #alacritty
+    blackbox-terminal
     neofetch
     kitty
     nushell
