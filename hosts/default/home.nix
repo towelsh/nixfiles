@@ -116,6 +116,7 @@ xdg.configFile = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
       edge-tiling = true;
+      font-name = "Mona Sans 11";
     };
   };
 
