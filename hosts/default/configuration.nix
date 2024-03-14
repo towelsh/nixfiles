@@ -129,6 +129,7 @@
     wget
     git
     gh
+    lazygit
 
     # desktop env
     gnome.gnome-tweaks
