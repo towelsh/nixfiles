@@ -110,13 +110,36 @@ xdg.configFile = {
   "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
 };
 
+  # configure gnome shell theme
+  home.file.".themes/Colloid-Orange-Dark-Nord" = {
+    source = ./Colloid-Orange-Dark-Nord;
+    recursive = true;
+  };
+
   # configure dconf settings for gnome
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       enable-hot-corners = false;
       edge-tiling = true;
-      font-name = "Mona Sans 11";
+    };
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "Colloid-Orange-Dark-Nord";
+    };
+    "org/gnome/shell/extensions/trayIconsReloaded" = {
+      icon-margin-vertical = 5;
+    };
+    "org/gnome/shell/extensions/just-perfection" = {
+      activities-button = false;
+      theme = true;
+    };
+    "org/gnome/extensions/sp-tray" = {
+      paused = "\u200b";
+    };
+    "org/gnome/shell" = {
+      [
+        "just-perfection-desktop@just-perfection", "dash-to-dock@micxgx.gmail.com", "sp-tray@sp-tray.esenliyim.github.com", "trayIconsReloaded@selfmade.pl", "Rounded_Corners@lennart-k", "user-theme@gnome-shell-extensions.gcampax.github.com"
+      ];
     };
   };
 

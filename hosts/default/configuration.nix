@@ -136,6 +136,14 @@
     gnome.gnome-tweaks
     gnome-extension-manager
     gnome.dconf-editor
+
+    # gnome extensions
+    gnomeExtensions.just-perfection
+    gnomeExtensions.dash-to-dock
+    gnomeExtensions.spotify-tray
+    gnomeExtensions.tray-icons-reloaded
+    gnomeExtensions.rounded-corners
+    gnomeExtensions.user-themes
   ];
 
   # add fonts
