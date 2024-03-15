@@ -128,6 +128,7 @@
     #alacritty
     blackbox-terminal
     neofetch
+    pfetch-rs
     kitty
     nushell
     starship
@@ -156,6 +157,7 @@
     gnomeExtensions.tray-icons-reloaded
     gnomeExtensions.rounded-corners
     gnomeExtensions.user-themes
+    gnomeExtensions.blur-my-shell
   ];
 
   # add fonts
