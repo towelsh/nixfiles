@@ -119,6 +119,7 @@
     ticktick
     vscode
     piper
+    libratbag
 
     # games
     steam
