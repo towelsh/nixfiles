@@ -118,8 +118,11 @@
     spotify
     ticktick
     vscode
-    steam
     piper
+
+    # games
+    steam
+    grapejuice
 
     # terminal utils
     #alacritty
