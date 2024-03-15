@@ -118,6 +118,8 @@
     spotify
     ticktick
     vscode
+    steam
+    piper
 
     # terminal utils
     #alacritty
