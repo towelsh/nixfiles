@@ -161,6 +161,9 @@
     gnomeExtensions.blur-my-shell
   ];
 
+  # enable services
+  services.ratbagd.enable = true;
+
   # add fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
