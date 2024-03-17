@@ -118,6 +118,7 @@
     spotify
     ticktick
     vscode
+    gimp
 
     # hardware control
     piper
