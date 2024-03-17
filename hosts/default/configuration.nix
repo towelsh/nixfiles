@@ -118,8 +118,11 @@
     spotify
     ticktick
     vscode
+
+    # hardware control
     piper
     libratbag
+    streamdeck-ui
 
     # games
     steam
