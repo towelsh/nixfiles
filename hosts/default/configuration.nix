@@ -113,9 +113,11 @@
     firefox
     thunderbird
     vivaldi
+    tor-browser
     # discord
     vesktop
     spotify
+    spicetify-cli
     ticktick
     vscode
     gimp
@@ -146,6 +148,7 @@
     # devtools
     rustup
     python3
+    python311Packages.pip
     jdk8
     jdk
     nodejs_21
