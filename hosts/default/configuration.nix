@@ -127,6 +127,10 @@
     libratbag
     streamdeck-ui
 
+    # gpu
+    glxinfo
+    pciutils
+
     # games
     steam
     grapejuice
@@ -167,6 +171,13 @@
     gnomeExtensions.user-themes
     gnomeExtensions.blur-my-shell
   ];
+
+  hardware.opengl = {
+    extraPackages = [ pkgs.amdvlk ];
+    extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
+    driSupport = true;
+    driSupport32Bit = true;
+  };
 
   # enable services
   services.ratbagd.enable = true;
