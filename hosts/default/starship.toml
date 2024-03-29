@@ -3,10 +3,10 @@ format = """
 [ 󱄅 ](bg:#f5bde6 fg:#090c0c)\
 [](bg:#c6a0f6 fg:#f5bde6)\
 $directory\
-[](fg:#c6a0f6 bg:#b7bdf8)\
+[](fg:#c6a0f6 bg:#394260)\
 $git_branch\
 $git_status\
-[](fg:#b7bdf8 bg:#212736)\
+[](fg:#394260 bg:#212736)\
 $nodejs\
 $rust\
 $golang\
