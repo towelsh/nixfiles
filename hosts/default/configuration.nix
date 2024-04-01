@@ -170,6 +170,7 @@
     gnomeExtensions.rounded-corners
     gnomeExtensions.user-themes
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.caffeine
   ];
 
   hardware.opengl = {

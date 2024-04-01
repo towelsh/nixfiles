@@ -13,7 +13,8 @@ echo
 echo "NixOS is rebuilding..."
 ### sudo nixos-rebuild switch --flake ./#default &>nixos-switch.log || (cat nixos-switch.log | grep --color error && false)
 sudo nixos-rebuild switch --flake ./#default 
-current=$(nixos-rebuild list-generations | grep current)
+current=$(sudo nix-env -p /nix/var/nix/profiles/system --list-generations | grep "current")
+# current=$(nixos-rebuild list-generations | grep current)
 git commit -am "$current"
 popd
-echo "NixOS rebuilt successfully!"
+echo "NixOS rebuilt successfully! (gen $current)"
