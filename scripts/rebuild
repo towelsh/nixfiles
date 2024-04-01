@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
 set -e # exit immediately if a command has nonzero exit code
 pushd ~/nixos
-echo $NIX_PATH
+
+# Early return if no changes were detected (thanks @singiamtel!)
+if git diff --quiet; then
+    echo "No changes detected, exiting."
+    popd
+    exit 0
+fi
+
 git diff -U0
 
 read -p "OK to push and rebuild? (y/n) " -n 1 -r
