@@ -110,10 +110,14 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # custom
+    (writeShellScriptBin "rebuild" (builtins.readFile ../../scripts/rebuild))
+
     firefox
     thunderbird
     vivaldi
     tor-browser
+    termius
     # discord
     vesktop
     spotify
