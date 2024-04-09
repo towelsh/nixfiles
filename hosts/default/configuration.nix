@@ -89,7 +89,7 @@
     description = "joel";
     shell = pkgs.nushell;
     useDefaultShell = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       # firefox
     #  thunderbird
@@ -194,6 +194,8 @@
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  virtualisation.docker.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
