@@ -125,6 +125,7 @@
     ticktick
     vscode
     gimp
+    gparted
 
     # hardware control
     piper
