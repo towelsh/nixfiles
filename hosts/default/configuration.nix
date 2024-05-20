@@ -168,6 +168,7 @@
     git
     gh
     lazygit
+    ncdu
 
     # devtools
     rustup
