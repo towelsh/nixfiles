@@ -113,6 +113,9 @@
     # custom
     (writeShellScriptBin "rebuild" (builtins.readFile ../../scripts/rebuild))
 
+    # stuff you probably don't want
+    davinci-resolve
+
     firefox
     thunderbird
     vivaldi
