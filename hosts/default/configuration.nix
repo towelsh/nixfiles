@@ -194,7 +194,7 @@
   ];
 
   hardware.opengl = {
-    extraPackages = [ pkgs.amdvlk ];
+    extraPackages = [ pkgs.amdvlk pkgs.rocm-opencl-runtime ];
     extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
     driSupport = true;
     driSupport32Bit = true;
