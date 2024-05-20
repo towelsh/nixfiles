@@ -107,6 +107,18 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nixpkgs.overlays = [
+    (self: super: {
+	    davinci-resolve = super.davinci-resolve.override (old: {
+	      buildFHSEnv = a: (old.buildFHSEnv (a // {
+		extraBwrapArgs = a.extraBwrapArgs ++ [
+		  "--bind /run/opengl-driver/etc/OpenCL /etc/OpenCL"
+		];
+	      }));
+	    });
+    })
+  ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
