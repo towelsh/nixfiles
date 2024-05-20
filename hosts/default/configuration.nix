@@ -169,6 +169,7 @@
     gh
     lazygit
     ncdu
+    appimage-run
 
     # devtools
     rustup
