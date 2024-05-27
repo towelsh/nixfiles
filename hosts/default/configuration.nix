@@ -222,7 +222,6 @@
       Type = "forking";
       ExecStart = "${pkgs.streamdeck-ui}/bin/streamdeck";
       Restart = "always";
-      User = "joel";
     };
     wantedBy = [ "default.target" ];
   };
