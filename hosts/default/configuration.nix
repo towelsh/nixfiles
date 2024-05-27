@@ -215,6 +215,18 @@
   # enable services
   services.ratbagd.enable = true;
 
+  systemd.user.services.streamdeck-ui = {
+    enable = true;
+    description = "Streamdeck UI";
+    serviceConfig = {
+      Type = "forking";
+      ExecStart = "${pkgs.streamdeck-ui}/bin/streamdeck";
+      Restart = "always";
+      User = "joel";
+    };
+    wantedBy = [ "default.target" ];
+  };
+
   # add fonts
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
