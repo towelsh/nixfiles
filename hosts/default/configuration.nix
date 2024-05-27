@@ -187,6 +187,7 @@
     jdk8
     jdk
     nodejs_21
+    bun
 
     # desktop env
     gnome.gnome-tweaks
