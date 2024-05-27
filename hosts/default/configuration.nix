@@ -220,7 +220,7 @@
     description = "Streamdeck UI";
     serviceConfig = {
       Type = "forking";
-      ExecStart = "${pkgs.streamdeck-ui}/bin/streamdeck";
+      ExecStart = "${pkgs.streamdeck-ui}/bin/streamdeck -n";
       Restart = "always";
     };
     wantedBy = [ "default.target" ];
