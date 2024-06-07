@@ -136,6 +136,7 @@
 
     # stuff you probably don't want
     davinci-resolve
+    prismlauncher
 
     firefox
     thunderbird
