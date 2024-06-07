@@ -186,6 +186,7 @@
     python3
     python311Packages.pip
     jdk8
+    jdk22
     jdk
     nodejs_21
     bun
