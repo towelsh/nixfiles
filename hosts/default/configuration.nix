@@ -207,6 +207,10 @@
     gnomeExtensions.caffeine
   ];
 
+  environment.shells = [
+  	pkgs.nushell
+  ];
+
   hardware.opengl = {
     extraPackages = [ pkgs.amdvlk pkgs.rocm-opencl-runtime ];
     extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
