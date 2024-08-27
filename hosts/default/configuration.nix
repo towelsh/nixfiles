@@ -151,6 +151,7 @@
     vscode
     gimp
     gparted
+    btop
 
     # hardware control
     piper
