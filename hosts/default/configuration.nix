@@ -152,6 +152,7 @@
     gimp
     gparted
     btop
+    exfatprogs
 
     # hardware control
     piper
