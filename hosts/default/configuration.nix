@@ -185,6 +185,7 @@
 
     # devtools
     rustup
+    gcc
     python3
     python311Packages.pip
     jdk8
