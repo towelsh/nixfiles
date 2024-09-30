@@ -210,6 +210,11 @@
     gnomeExtensions.caffeine
   ];
 
+  # show characters when typing in sudo
+  security.sudo = {
+    extraConfig = "Defaults env_reset,pwfeedback";
+  };
+
   environment.shells = [
   	pkgs.nushell
   ];
