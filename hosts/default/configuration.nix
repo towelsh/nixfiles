@@ -9,8 +9,11 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      # ./main-user.nix
+      ./main-user.nix
     ];
+
+  main-user.enable = true;
+  main-user.userName = "joel";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -92,26 +95,7 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.joel = {
-    isNormalUser = true;
-    description = "joel";
-    shell = pkgs.nushell;
-    useDefaultShell = true;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    packages = with pkgs; [
-      # firefox
-    #  thunderbird
-    ];
-  };
 
-  home-manager = {
-    # also pass inputs to home-manager modules
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "joel" = import ./home.nix;
-    };
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
