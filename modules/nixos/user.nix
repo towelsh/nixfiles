@@ -3,7 +3,7 @@
     defaultUserShell = pkgs.nushell;
     users.joel = {
       isNormalUser = true;
-      description = "primary user";
+      description = "joel";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
     };
   };
