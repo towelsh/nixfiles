@@ -8,12 +8,29 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/nixos/user.nix
       inputs.home-manager.nixosModules.default
-      ./main-user.nix
     ];
 
-  main-user.enable = true;
-  main-user.userName = "joel";
+  # main-user = {
+  #   enable = true;
+  #   userName = "joel";
+  # };
+
+  # users.users.${userName} = {
+  #     isNormalUser = true;
+  #     description = "primary user";
+  #     shell = pkgs.nushell;
+  #     extraGroups = [ "networkmanager" "wheel" "docker" ];
+  # };
+
+  home-manager = {
+      # also pass inputs to home-manager modules
+      extraSpecialArgs = { inherit inputs; };
+      users = {
+        joel = import ./home.nix;
+      };
+    };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "joel";
+  home.username = joel;
   home.homeDirectory = "/home/joel";
 
   # This value determines the Home Manager release that your configuration is
@@ -88,27 +88,27 @@
   # configure gtk theme (todo: move to a module)
   gtk = {
   	enable = true;
-	iconTheme = {
-		name = "Papirus-Dark";
-		package = pkgs.papirus-icon-theme;
-	};
-	theme = {
-		name = "Catppuccin-Macchiato-Standard-Pink-Dark";
-		package = pkgs.catppuccin-gtk.override {
-			accents = [ "pink" ];
-			size = "standard";
-			tweaks = [ "rimless" ];
-			variant = "macchiato";
-		};
-	};
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+    theme = {
+      name = "Catppuccin-Macchiato-Standard-Pink-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "pink" ];
+        size = "standard";
+        tweaks = [ "rimless" ];
+        variant = "macchiato";
+      };
+    };
   };
 
-# we need to symlink the themes for gtk4 theme to work
-xdg.configFile = {
-  "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-  "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-  "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
-};
+  # we need to symlink the themes for gtk4 theme to work
+  xdg.configFile = {
+    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
+    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
+    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+  };
 
   # configure gnome shell theme
   home.file.".themes/Colloid-Orange-Dark-Nord" = {
