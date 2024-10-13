@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    ../../modules/home-manager/starship/starship.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "joel";
@@ -81,8 +85,6 @@
   # kitty terminal configuration
   home.file.".config/kitty/kitty.conf".text = builtins.readFile ./kitty.conf;
 
-  # starship prompt configuration
-  home.file.".config/starship.toml".text = builtins.readFile ./starship.toml;
 
 
   # configure gtk theme (todo: move to a module)
