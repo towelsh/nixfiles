@@ -194,6 +194,7 @@
     jdk
     nodejs_21
     bun
+    nil
 
     # desktop env
     gnome.gnome-tweaks

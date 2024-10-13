@@ -5,6 +5,6 @@
       isNormalUser = true;
       description = "primary user";
       extraGroups = [ "networkmanager" "wheel" "docker" ];
-    }
-  }
+    };
+  };
 }
