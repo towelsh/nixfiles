@@ -144,8 +144,10 @@
     vivaldi
     tor-browser
     termius
-    # discord
-    vesktop
+    (discord.override {
+      withVencord = true;
+    })
+    # vesktop
     spotify
     spicetify-cli
     ticktick
